@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Excel Birthdate Processor</title>
+</head>
+
+<body>
+    <h2>Upload an Excel file</h2>
+    <label for="fileInput">Choose an Excel file:</label>
+    <input type="file" id="fileInput" accept=".xlsx, .xls,.numbers" title="Upload your Excel file">
+    <button id="process-btn" type="button">Process File</button>
+    <table id="data-table" border="1">
+        <thead>
+            <tr>
+                <th>Birth Date</th>
+                <th>Death Date</th>
+                <th>Years</th>
+                <th>Months</th>
+                <th>Days</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+    <canvas id="ageChart" width="400" height="200"></canvas>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="lib/luxon.min.js"></script>
+    <script src="lib/xlsx.full.min.js"></script>
+    <script src="utils/date.js"></script>
+    <script src="utils/excel.js"></script>
+    <script src="script.js" defer></script>
+</body>
+
+</html>
