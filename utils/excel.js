@@ -20,20 +20,20 @@ function populateTable(rows) {
   table.style.borderCollapse = 'collapse';
   table.style.width = '100%';
   table.querySelectorAll('th, td').forEach((cell) => {
-    cell.style.border = '1px solid #ddd';
-    cell.style.padding = '8px';
+    cell.style.border = '1px solid #ccc';
+    cell.style.padding = '10px';
   });
   table.querySelectorAll('tr:nth-child(even)').forEach((row) => {
-    row.style.backgroundColor = '#f2f2f2';
+    row.style.backgroundColor = '#e6f7ff';
   });
   table.querySelectorAll('tr:hover').forEach((row) => {
-    row.style.backgroundColor = '#ddd';
+    row.style.backgroundColor = '#cceeff';
   });
   table.querySelectorAll('th').forEach((header) => {
-    header.style.paddingTop = '12px';
-    header.style.paddingBottom = '12px';
+    header.style.paddingTop = '14px';
+    header.style.paddingBottom = '14px';
     header.style.textAlign = 'left';
-    header.style.backgroundColor = '#4CAF50';
+    header.style.backgroundColor = '#0073e6';
     header.style.color = 'white';
   });
 }
