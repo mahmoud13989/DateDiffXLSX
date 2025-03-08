@@ -4,8 +4,9 @@ function injectAge(row) {
     const birthDate = excelDateTimeToJSDate(row.DBirthDate);
     if (birthDate === 'Invalid Date') return row;
 
-    const diff = diffLuxonDates(deathDate, birthDate);
-
+    const use =  new calculateDateDifference(deathDate, birthDate);
+    const diff = use.jsBuiltIn();
+    console.log({diff})
     return {
       DBirthDate: { t: 'd', v: birthDate },
       DDeathDate: { t: 'd', v: deathDate },
